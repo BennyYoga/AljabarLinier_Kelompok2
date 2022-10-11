@@ -51,6 +51,7 @@ int det(int B[m][n]) {
         register int row,column;
 
         // exclude first row and current column
+        printf("\n Generated Minor is : \n");
         for(firstrow_columnindex = 0; firstrow_columnindex < row_size;
                 firstrow_columnindex++) {
 
@@ -71,6 +72,15 @@ int det(int B[m][n]) {
 
                 row_minor++;
             }
+           
+            for (int i = 0; i < row_minor; i++){
+            	printf("[");
+            	for(int j = 0; j < column_minor; j++){
+            		printf(" %d ", minor[i][j]);	
+				}
+				printf("]\n");
+			}
+			printf("\n");
 
             m = row_minor;
             n = column_minor;
